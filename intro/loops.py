@@ -48,7 +48,7 @@ ex4: find the maximum of a list
 3. dont use loop (2 different ways)
 
 
-ex5: createa code that can print the following:
+ex5: create code that can print the following:
 5 x 1 = 5
 5 x 2 = 10
 ...
@@ -56,5 +56,7 @@ ex5: createa code that can print the following:
 
 
 ex6: create a code that counts the vowels of a word
+
+
 """
 
