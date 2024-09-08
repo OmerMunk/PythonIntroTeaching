@@ -22,7 +22,12 @@ def divide_2_numbers(num1, num2):
     return result
 
 
-def is_prime(num):
+def is_prime(num: int) -> bool:
+    """
+    This function gets an integer number as a parameter and returns if it's prime or not.
+    :param num: an integer number to determine if it is a prime number.
+    :return: True if prime, False otherwise.
+    """
     if type(num) != int or num < 2:
         return False
     for i in range(2, int(num ** 0.5) + 1):
@@ -31,5 +36,7 @@ def is_prime(num):
     return True
 
 
-is_prime(5)
-is_prime(6.5)
+x = is_prime(5)
+is_prime(5.7)
+
+

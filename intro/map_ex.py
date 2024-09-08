@@ -16,10 +16,10 @@ person number 1 can drink alcohol in israel only
 person number 2 can drink alcohol in israel and us
 ...
 """
-MIN_AGE_ALCOHOL_US = 21
-MIN_AGE_ALCOHOL_ISRAEL = 18
+MIN_AGE_ALCOHOL_US: int = 21
+MIN_AGE_ALCOHOL_ISRAEL: int = 18
 
-def alcohol_state(age):
+def alcohol_state(age: int) -> str:
     if MIN_AGE_ALCOHOL_US > age >= MIN_AGE_ALCOHOL_ISRAEL:
         return "can drink alcohol in israel only"
     elif age >= MIN_AGE_ALCOHOL_US:
@@ -27,7 +27,7 @@ def alcohol_state(age):
     else:
         return "cant drink alcohol"
 
-results = list(map(alcohol_state ,ages))
+results: list = list(map(alcohol_state ,ages))
 # for i in range(len(results)):
 #     print(f"person {i +1} {results[i]}")
 
