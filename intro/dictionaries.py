@@ -112,3 +112,29 @@ output:
     ...
 }
 """
+
+def count_frequencies(lst):
+    frequency = {}
+    for element in lst:
+        if element in frequency:
+            frequency[element] += 1
+        else:
+            frequency[element] = 1
+    return frequency
+
+
+
+input1 = [10, 20, 35, 14, 10, 20, 15, 17, 20]
+print(count_frequencies(input1))
+
+
+def group_student_by_grade(students):
+    grade_dict = {}
+    for student, grade in students:
+        grade_dict.setdefault(grade, []).append(student)
+    return grade_dict
+
+
+
+students = [["omer", 40],["avi", 50],["shlomi", 50],["aron", 25],["bodi", 80]]
+print(group_student_by_grade(students))
