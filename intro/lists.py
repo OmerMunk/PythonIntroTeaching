@@ -1,3 +1,10 @@
+# empty list:
+# 1
+list1 = []
+# 2
+list2 = list()
+
+
 numbers = [16, 52, -300, 4,-300, 5]
 
 # optional BUT not recommended
