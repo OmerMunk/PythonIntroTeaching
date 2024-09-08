@@ -150,13 +150,7 @@ age = int(input("hi what is your age?"))
 print(f"wow! next year you will be {age+1}")
 
 
-age = 20
-if age >= 18:
-    print("asfjhas")
-elif age < 13:
-    print("dasfafwa")
-else:
-    print("dfsdas")
+
 
 
 
