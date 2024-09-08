@@ -150,6 +150,11 @@ age = int(input("hi what is your age?"))
 print(f"wow! next year you will be {age+1}")
 
 
+# trinary
+# c#
+# string result = age > 18 ? "can drink" : "cannot drink"
+result = "can drink" if age > 18 else "cant drink"
+
 
 
 
