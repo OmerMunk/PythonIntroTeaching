@@ -27,3 +27,34 @@ for num in numbers:
 
 
 
+"""
+ex1: create a list with 5 fruits
+print all fruits in this format:
+"fruit is: ??"
+
+
+ex2: create a list with 5 fruits
+print all fruits in this format:
+"fruit in index ?? is: ??"
+
+ex3: write a code that iterates over 10 grades, 
+and prints the average of them.
+1. using loop
+2. dont use loop
+
+ex4: find the maximum of a list
+1. using loop
+2. dont use loop 
+3. dont use loop (2 different ways)
+
+
+ex5: createa code that can print the following:
+5 x 1 = 5
+5 x 2 = 10
+...
+5 x 10 = 50
+
+
+ex6: create a code that counts the vowels of a word
+"""
+
