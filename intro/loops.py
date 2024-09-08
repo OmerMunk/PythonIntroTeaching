@@ -1,4 +1,6 @@
 # range with 1 param: from 0 to n-1
+from functools import reduce
+
 for i in range(10):
     print(i)
 
