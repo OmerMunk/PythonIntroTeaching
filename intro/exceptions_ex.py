@@ -14,17 +14,17 @@
 # except Exception:
 #     # handle exception
 
-# try:
-#     number = int(input("enter a number: "))
-#     result = 100 / number
-#     print(f'result is {result}')
-# except ZeroDivisionError:
-#     print("Invalid input, cannot divide by zero, please try again")
-# except ValueError:
-#     print("Invalid input, please enter a valid integer")
-# except Exception as e:
-#     print(f"unknown error: {e}, please try again ")
-#
+try:
+    number = int(input("enter a number: "))
+    result = 100 / number
+    print(f'result is {result}')
+except ZeroDivisionError:
+    print("Invalid input, cannot divide by zero, please try again")
+except ValueError:
+    print("Invalid input, please enter a valid integer")
+except Exception as e:
+    print(f"unknown error: {e}, please try again ")
+
 #
 # try:
 #     number = int(input("Enter a number: "))
