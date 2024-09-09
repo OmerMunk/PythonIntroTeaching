@@ -55,6 +55,7 @@ fronzen = frozenset()
 
 
 """
+TUPPLES
 easy:
 Write a function list_of_tuples_to_dict that takes a list of tuples, where each tuple contains two elements: a key and a value. Convert this list of tuples into a dictionary and return it.
 # Example Input
@@ -95,6 +96,63 @@ students = [
 
 # Example Output
 # [('David', 90.0, 'Minor'), ('Alice', 90.0, 'Adult'), ('Charlie', 83.67, 'Adult')]
+
+
+
+"""
+
+
+
+"""
+SETS AND FROZEN SETS:
+
+easy:
+Two brokers, Broker A and Broker B, provide a list of stock symbols they currently have available for trading. Write a function find_common_stocks that takes two sets representing these stock symbols and returns a sorted list of symbols that both brokers have in common.
+
+# Example Input
+broker_a_stocks = {"AAPL", "MSFT", "GOOGL", "TSLA", "AMZN"}
+broker_b_stocks = {"NFLX", "MSFT", "TSLA", "FB", "AAPL"}
+
+# Example Output
+# ['AAPL', 'MSFT', 'TSLA']
+
+medium:
+A financial analyst tracks monthly expenses for a company and categorizes them into various groups (e.g., “Travel”, “Marketing”, “Salaries”). Write a function unique_expense_categories that takes a list of sets, where each set represents expense categories for a given month, and returns a sorted set of all unique expense categories across all months.
+
+# Example Input
+monthly_expenses = [
+    {"Travel", "Marketing", "Salaries"},
+    {"Marketing", "R&D", "Utilities"},
+    {"Salaries", "Legal", "Marketing"},
+    {"IT", "Travel", "R&D"}
+]
+
+# Example Output
+# {'IT', 'Legal', 'Marketing', 'R&D', 'Salaries', 'Travel', 'Utilities'}
+
+
+hard:
+
+
+A financial institution is tracking assets that have been frozen by regulatory authorities due to compliance issues. Each frozenset contains the asset IDs frozen in a particular month. Write a function analyze_frozen_assets that takes a list of frozensets representing monthly frozen assets and returns:
+
+	1.	A set of all unique asset IDs that have been frozen at any point.
+	2.	A set of asset IDs that were frozen in every month.
+	3.	A set of asset IDs that were frozen in only one month.
+	
+	
+	
+# Example Input
+monthly_frozen_assets = [
+    frozenset({"Asset1", "Asset2", "Asset3"}),
+    frozenset({"Asset2", "Asset4", "Asset3"}),
+    frozenset({"Asset2", "Asset3", "Asset5"}),
+]
+
+# Example Output
+# All frozen assets: {'Asset1', 'Asset2', 'Asset3', 'Asset4', 'Asset5'}
+# Always frozen assets: {'Asset2', 'Asset3'}
+# Frozen in only one month: {'Asset1', 'Asset4', 'Asset5'}
 
 
 
