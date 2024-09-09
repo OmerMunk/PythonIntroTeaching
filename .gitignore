@@ -164,3 +164,4 @@ cython_debug/
 /intro/dictionaries_solutions.py
 /intro/filter_solutions.py
 /intro/map_solutions.py
+/intro/reduce_solutions.py
