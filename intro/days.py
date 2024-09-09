@@ -40,12 +40,14 @@ Methods
 
 
 day3:
+dates
 Working with files
 Reading, writing, file management.
 Error Handling
 Try/except
 Modules
 Importing, common modules, creating a module
+upload to pip
 Packages
 Pypi, pip, venv
 
@@ -57,3 +59,10 @@ day4:
 
 
 """
+
+
+
+names = ["omer", "avi", "bibi"]
+
+upper_names = [x.upper() for x in names]
+print(upper_names)

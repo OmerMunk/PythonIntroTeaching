@@ -66,26 +66,29 @@ with open(file_path, 'r') as file:
     lines = file.readlines()
     print(lines)
 
+exit(1)
 output_path = 'output.txt'
 with open(output_path, 'w') as file:
     file.write("This is the first line.\n")
     file.write("another line.\n")
 
-# people = [("avi", 40), ('john', 35), ('beni', 10)]
-# with open('people.csv', 'w') as file:
-#     columns = ["name", "age"]
-#     first_line = ",".join(columns)
-#     file.write(f'{first_line}\n')
-#     for person in people:
-#         file.write(f'{person[0]},{person[1]}\n')
-#     # for name, age in people:
-#     #     file.write(f'{name},{age}\n')
+people = [("avi", 40), ('john', 35), ('beni', 10)]
+with open('people.csv', 'w') as file:
+    columns = ["name", "age"]
+    first_line = ",".join(columns)
+    file.write(f'{first_line}\n')
+    for person in people:
+        file.write(f'{person[0]},{person[1]}\n')
+    # for name, age in people:
+    #     file.write(f'{name},{age}\n')
 
 
 with open('people.csv', 'a') as file:
     new_people = [("Omer", 29)]
     for person in new_people:
         file.write(f'{person[0]},{person[1]}\n')
+
+exit(1)
 
 # delete file
 
