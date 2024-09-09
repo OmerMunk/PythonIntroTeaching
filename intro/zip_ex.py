@@ -79,7 +79,7 @@ print(f"unzipped unzipped_properties: {unzipped_properties}")
 # Example Output:
 # Output:
 # Financial report: [
-#   {'branch': 'Tel Aviv', 'total_balance': 22500, 'average_transaction_amount': 562.5},
-#   {'branch': 'Jerusalem', 'total_balance': 9000, 'average_transaction_amount': 391.3},
-#   {'branch': 'Haifa', 'total_balance': 21000, 'average_transaction_amount': 1000.0}
+#   {'branch': 'Tel Aviv', 'total_balance': 22500, 'average_transaction_amount': 500.0},
+#   {'branch': 'Jerusalem', 'total_balance': 9000, 'average_transaction_amount': 300.0},
+#   {'branch': 'Haifa', 'total_balance': 21000, 'average_transaction_amount': 1050.0}
 # ]
