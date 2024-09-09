@@ -167,3 +167,4 @@ cython_debug/
 /intro/reduce_solutions.py
 /intro/files_solution.py
 /intro/group_by_solutions.py
+/intro/zip_solutions.py
