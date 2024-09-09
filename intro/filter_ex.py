@@ -42,6 +42,72 @@ print(cleaned_string)
 # exercise - include the " "
 
 
+# Task 1 (Easy): Filter High-Value Bank Transactions
+# Explanation:
+# Write a function `filter_high_value_transactions` that takes a list of transactions as input, where each transaction is
+# represented by a dictionary with keys "id" (transaction ID) and "amount" (transaction amount in NIS). The function should
+# use `filter()` to return a list of all transactions with an amount greater than 1,000 NIS.
+
+
+
+# Example Input:
+# transactions = [
+#     {"id": "T001", "amount": 500.0},
+#     {"id": "T002", "amount": 1500.0},
+#     {"id": "T003", "amount": 750.0},
+#     {"id": "T004", "amount": 2000.0}
+# ]
+
+# Example Output:
+# Output: High-value transactions: [{'id': 'T002', 'amount': 1500.0}, {'id': 'T004', 'amount': 2000.0}]
+
+# ----------------------------------------------------------------------
+
+# Task 2 (Medium): Filter Customers with Loans Above a Certain Interest Rate
+# Explanation:
+# Write a function `filter_high_interest_loans` that takes a dictionary representing customer loans, where each key is a
+# customer name and the value is another dictionary with keys "loan_amount" (float) and "interest_rate" (float, in %). The
+# function should use `filter()` to find and return a list of customer names with loans that have an interest rate above 5%.
+
+
+# Example Input:
+# customers = {
+#     "Alice": {"loan_amount": 100000, "interest_rate": 3.5},
+#     "Bob": {"loan_amount": 200000, "interest_rate": 6.5},
+#     "Charlie": {"loan_amount": 150000, "interest_rate": 5.0},
+#     "David": {"loan_amount": 180000, "interest_rate": 7.0}
+# }
+
+# Example Output:
+# Output: Customers with high-interest loans: ['Bob', 'David']
+
+# ----------------------------------------------------------------------
+
+# Task 3 (Hard): Filter and Sort Bank Accounts Based on Minimum Balance and Account Type
+# Explanation:
+# Write a function `filter_and_sort_accounts` that takes a list of dictionaries, where each dictionary represents a bank
+# account with keys "account_number" (str), "balance" (float), and "account_type" (str - "savings" or "checking"). The function
+# should first use `filter()` to find accounts with a balance greater than 10,000 NIS and of type "savings". Then, it should
+# sort the filtered accounts in descending order by balance and return the sorted list.
+
+
+
+# Example Input:
+# accounts = [
+#     {"account_number": "001", "balance": 15000.0, "account_type": "savings"},
+#     {"account_number": "002", "balance": 8000.0, "account_type": "savings"},
+#     {"account_number": "003", "balance": 20000.0, "account_type": "checking"},
+#     {"account_number": "004", "balance": 30000.0, "account_type": "savings"},
+#     {"account_number": "005", "balance": 5000.0, "account_type": "checking"}
+# ]
+
+# Example Output:
+# Output: Filtered and sorted accounts: [{'account_number': '004', 'balance': 30000.0, 'account_type': 'savings'}, {'account_number': '001', 'balance': 15000.0, 'account_type': 'savings'}]
+
+
+
+
+
 
 
 

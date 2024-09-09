@@ -11,6 +11,7 @@ with open(csv_file_path, "r", encoding="utf-8-sig", newline='') as csv_file:
 
 
 
+
 def analyze_interest_with_dates(data, start, end):
     # Convert start and end to datetime objects for comparison
     start_date = datetime.strptime(start, '%m/%Y')
