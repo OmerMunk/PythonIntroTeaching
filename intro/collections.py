@@ -95,7 +95,7 @@ students = [
 ]
 
 # Example Output
-# [('David', 90.0, 'Minor'), ('Alice', 90.0, 'Adult'), ('Charlie', 83.67, 'Adult')]
+# [('Alice', 90.0, 'Minor'), ('David', 90.0, 'Minor'), ('Charlie', 83.67, 'Adult')]
 
 
 
