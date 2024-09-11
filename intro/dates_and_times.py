@@ -82,6 +82,135 @@ dt_jerus = datetime.now(tz=jerus)
 print(type(dt_jerus.tzinfo))
 print(dt_jerus)
 
+# Task 1 (Easy): Calculate Working Days Between Two Dates
+# Explanation:
+# Write a function `working_days_between` that takes two dates as input and calculates the number of working days (Monday to Friday)
+# between them, excluding weekends. Use `datetime` and list comprehensions, and apply `enumerate` to label each working day.
+
+
+
+
+
+# Example Input:
+# start_date = '2024-08-01'
+# end_date = '2024-08-10'
+
+# Example Output:
+
+
+# Output: (7, [(1, datetime(2024, 8, 1)), (2, datetime(2024, 8, 2)), (3, datetime(2024, 8, 5)), ...])
+
+# ----------------------------------------------------------------------
+
+# Task 2 (Easy): Calculate Daily Interest
+# Explanation:
+# Write a function `calculate_daily_interest` that calculates the daily compound interest for each day of a month given
+# the principal, rate, and days. Use `zip` to pair days with interest rates.
+
+
+
+# Example Input:
+# principal = 1000
+# rate = 0.05
+# days = 31
+
+# Example Output:
+# Output: [1001.37, 1002.74, 1004.12, ...]
+
+# ----------------------------------------------------------------------
+
+# Task 3 (Medium): Group Transactions by Week
+# Explanation:
+# Write a function `group_transactions_by_week` that takes a list of transaction dates and amounts and groups them by week number.
+# Use `groupby` to group transactions by the week and `enumerate` to label each week's transactions.
+
+
+
+
+
+# Example Input:
+# transactions = [
+#     ('2024-08-01', 500),
+#     ('2024-08-03', 300),
+#     ('2024-08-05', 200),
+#     ('2024-08-07', 150),
+#     ('2024-08-10', 100)
+# ]
+
+# Example Output:
+# Output: {31: [(1, (datetime(2024, 8, 1), 500)), (2, (datetime(2024, 8, 3), 300)), ...]}
+
+# ----------------------------------------------------------------------
+
+# Task 4 (Medium): Calculate Net Position Over Time
+# Explanation:
+# Write a function `calculate_net_position` that takes a list of deposits and withdrawals with their respective dates,
+# computes the net position per week, and returns a summary. Use `reduce` to compute the net position.
+
+
+
+
+
+
+# Example Input:
+# transactions = [
+#     ('2024-08-01', 500),
+#     ('2024-08-03', -300),
+#     ('2024-08-05', 200),
+#     ('2024-08-07', -150),
+#     ('2024-08-10', -100)
+# ]
+
+# Example Output:
+
+
+# Output: {31: 150, 32: -250}
+
+# ----------------------------------------------------------------------
+
+# Task 5 (Hard): Forecast Monthly Cash Flow
+# Explanation:
+# Write a function `forecast_cash_flow` that takes a list of daily transactions for a month and forecasts the net cash flow
+# at the end of the month. Use `zip`, `map`, `filter`, and `datetime` to perform the analysis.
+
+
+
+
+# Example Input:
+# transactions = [
+#     ('2024-08-01', 500),
+#     ('2024-08-02', -200),
+#     ('2024-08-05', 300),
+#     ('2024-08-07', -100),
+#     ('2024-08-10', 400)
+# ]
+
+# Example Output:
+
+
+# Output: 900
+
+# ----------------------------------------------------------------------
+
+# Task 6 (Hard): Calculate Average Transaction Time Difference by Time Zone
+# Explanation:
+# Write a function `average_time_difference` that calculates the average time difference between transactions
+# grouped by their time zones. Use `datetime`, `timedelta`, `groupby`, `map`, and `reduce` to perform this task.
+
+
+
+
+# Example Input:
+# transactions = [
+#     ('2024-08-01 10:00:00', 'IST', 500),
+#     ('2024-08-01 15:00:00', 'IST', -200),
+#     ('2024-08-02 09:00:00', 'PST', 300),
+#     ('2024-08-02 17:00:00', 'PST', -100),
+#     ('2024-08-03 12:00:00', 'IST', 400)
+# ]
+
+# Example Output:
+# Output: {'IST': 18000.0, 'PST': 28800.0}
 
 
 

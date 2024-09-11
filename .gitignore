@@ -168,3 +168,4 @@ cython_debug/
 /intro/files_solution.py
 /intro/group_by_solutions.py
 /intro/zip_solutions.py
+/intro/date_time_solutions.py
