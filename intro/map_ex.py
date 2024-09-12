@@ -57,7 +57,7 @@ for i, result in enumerate(results):
 # Task 2 (Medium): Calculate Monthly Interest for Savings Accounts
 # Explanation:
 # Write a function `calculate_monthly_interest` that takes a dictionary representing customer savings accounts,
-# where each key is the account number (str) and the value is a tuple containing the balance (float) and annual
+# where each key is the account number (str) and the value is a tuple containing the _balance (float) and annual
 # interest rate (float, in %). Use `map()` to calculate the monthly interest for each account and return a list
 # of tuples containing the account number and its calculated monthly interest.
 

@@ -51,26 +51,26 @@ print("Customers with high-interest loans:", filter_high_interest_loans(customer
 # Task 3 (Hard): Filter and Sort Bank Accounts Based on Minimum Balance and Account Type
 # Explanation:
 # Write a function `filter_and_sort_accounts` that takes a list of dictionaries, where each dictionary represents a bank
-# account with keys "account_number" (str), "balance" (float), and "account_type" (str - "savings" or "checking"). The function
-# should first use `filter()` to find accounts with a balance greater than 10,000 NIS and of type "savings". Then, it should
-# sort the filtered accounts in descending order by balance and return the sorted list.
+# account with keys "account_number" (str), "_balance" (float), and "account_type" (str - "savings" or "checking"). The function
+# should first use `filter()` to find accounts with a _balance greater than 10,000 NIS and of type "savings". Then, it should
+# sort the filtered accounts in descending order by _balance and return the sorted list.
 
 def filter_and_sort_accounts(accounts):
-    # Use filter to find savings accounts with balance greater than 10,000 NIS
-    filtered_accounts = filter(lambda acc: acc["balance"] > 10000 and acc["account_type"] == "savings", accounts)
-    # Sort the filtered accounts by balance in descending order
-    sorted_accounts = sorted(filtered_accounts, key=lambda acc: acc["balance"], reverse=True)
+    # Use filter to find savings accounts with _balance greater than 10,000 NIS
+    filtered_accounts = filter(lambda acc: acc["_balance"] > 10000 and acc["account_type"] == "savings", accounts)
+    # Sort the filtered accounts by _balance in descending order
+    sorted_accounts = sorted(filtered_accounts, key=lambda acc: acc["_balance"], reverse=True)
     return sorted_accounts
 
 # Example Input:
 accounts = [
-    {"account_number": "001", "balance": 15000.0, "account_type": "savings"},
-    {"account_number": "002", "balance": 8000.0, "account_type": "savings"},
-    {"account_number": "003", "balance": 20000.0, "account_type": "checking"},
-    {"account_number": "004", "balance": 30000.0, "account_type": "savings"},
-    {"account_number": "005", "balance": 5000.0, "account_type": "checking"}
+    {"account_number": "001", "_balance": 15000.0, "account_type": "savings"},
+    {"account_number": "002", "_balance": 8000.0, "account_type": "savings"},
+    {"account_number": "003", "_balance": 20000.0, "account_type": "checking"},
+    {"account_number": "004", "_balance": 30000.0, "account_type": "savings"},
+    {"account_number": "005", "_balance": 5000.0, "account_type": "checking"}
 ]
 
 # Example Output:
 print("Filtered and sorted accounts:", filter_and_sort_accounts(accounts))
-# Output: Filtered and sorted accounts: [{'account_number': '004', 'balance': 30000.0, 'account_type': 'savings'}, {'account_number': '001', 'balance': 15000.0, 'account_type': 'savings'}]
+# Output: Filtered and sorted accounts: [{'account_number': '004', '_balance': 30000.0, 'account_type': 'savings'}, {'account_number': '001', '_balance': 15000.0, 'account_type': 'savings'}]

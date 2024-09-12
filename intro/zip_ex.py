@@ -41,7 +41,7 @@ print(f"unzipped unzipped_properties: {unzipped_properties}")
 # Explanation:
 # Write a function `calculate_total_balance_per_customer` that takes two lists: one containing customer names (where a customer
 # might appear multiple times) and the other containing their corresponding account balances. Use `zip()` to combine the lists
-# and then use a dictionary to sum up the total balance for each customer.
+# and then use a dictionary to sum up the total _balance for each customer.
 
 
 
@@ -50,7 +50,7 @@ print(f"unzipped unzipped_properties: {unzipped_properties}")
 # balances = [5000.0, 3000.0, 1500.0, 7000.0, 2500.0]
 
 # Example Output:
-# Output: Total balance per customer: {'Alice': 6500.0, 'Bob': 5500.0, 'Charlie': 7000.0}
+# Output: Total _balance per customer: {'Alice': 6500.0, 'Bob': 5500.0, 'Charlie': 7000.0}
 
 # ----------------------------------------------------------------------
 
@@ -58,7 +58,7 @@ print(f"unzipped unzipped_properties: {unzipped_properties}")
 # Explanation:
 # Write a function `generate_financial_report` that takes three lists: one containing branch names, another containing lists of
 # account balances for each branch, and a third list containing the corresponding list of transaction counts for each branch.
-# Use `zip()` to pair these values together and then generate a financial report showing the branch name, total balance, and
+# Use `zip()` to pair these values together and then generate a financial report showing the branch name, total _balance, and
 # average transaction amount per branch.
 
 

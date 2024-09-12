@@ -1,8 +1,8 @@
 # Task 1 (Easy): Write and Read Bank Account Details
 # Explanation:
-# Write a function `write_and_read_accounts` that writes a list of bank account details (account number and balance)
+# Write a function `write_and_read_accounts` that writes a list of bank account details (account number and _balance)
 # to a text file named `accounts.txt`. Each account detail should be written in a new line in the format:
-# "Account Number: [account_number], Balance: [balance]". Then, the function should read the contents of the file
+# "Account Number: [account_number], Balance: [_balance]". Then, the function should read the contents of the file
 # and print them.
 
 def write_and_read_accounts(accounts):
@@ -35,7 +35,7 @@ write_and_read_accounts(accounts)
 # Task 2 (Medium): Update Balances in a File
 # Explanation:
 # Write a function `update_balances` that reads a text file `balances.txt` containing account numbers and balances
-# (each line in the format: "account_number,balance"). The function should add a specified amount to all account
+# (each line in the format: "account_number,_balance"). The function should add a specified amount to all account
 # balances in the file and then write the updated balances back to the file.
 
 def update_balances(amount_to_add):

@@ -47,18 +47,18 @@ from itertools import groupby
 # Task 2 (Medium): Group Account Balances by Status
 # Explanation:
 # Write a function `group_balances_by_status` that takes a list of dictionaries, where each dictionary represents
-# an account with "account_number" (str) and "balance" (float). Group the accounts into "positive" or "negative"
-# based on their balance using `groupby`, and return a dictionary with the statuses as keys and a list of account numbers as values.
+# an account with "account_number" (str) and "_balance" (float). Group the accounts into "positive" or "negative"
+# based on their _balance using `groupby`, and return a dictionary with the statuses as keys and a list of account numbers as values.
 
 
 
 
 # Example Input:
 # accounts = [
-#     {"account_number": "123-456-789", "balance": 5000.0},
-#     {"account_number": "987-654-321", "balance": -750.0},
-#     {"account_number": "111-222-333", "balance": 12000.0},
-#     {"account_number": "444-555-666", "balance": -200.0},
+#     {"account_number": "123-456-789", "_balance": 5000.0},
+#     {"account_number": "987-654-321", "_balance": -750.0},
+#     {"account_number": "111-222-333", "_balance": 12000.0},
+#     {"account_number": "444-555-666", "_balance": -200.0},
 # ]
 
 # Example Output:

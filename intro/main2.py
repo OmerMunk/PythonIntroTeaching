@@ -28,7 +28,7 @@ ts.SNAKE_MAGIC
 from utils import *
 math_utils.add()
 str_utils.make_lower()
-shu
+
 
 
 

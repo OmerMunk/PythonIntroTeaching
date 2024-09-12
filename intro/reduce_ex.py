@@ -51,8 +51,8 @@ from functools import reduce
 # Task 2 (Medium): Calculate the Net Balance After Applying Fees
 # Explanation:
 # Write a function `calculate_net_balance` that takes a list of dictionaries, where each dictionary represents a transaction
-# with "amount" (float) and "fee" (float, in %). Use `reduce()` to calculate the net balance after applying the respective
-# fee to each transaction. The function should return the net balance rounded to two decimal places.
+# with "amount" (float) and "fee" (float, in %). Use `reduce()` to calculate the net _balance after applying the respective
+# fee to each transaction. The function should return the net _balance rounded to two decimal places.
 
 
 # Example Input:
@@ -64,7 +64,7 @@ from functools import reduce
 # ]
 
 # Example Output:
-# Output: Net balance after applying fees: 4777.5
+# Output: Net _balance after applying fees: 4777.5
 
 # ----------------------------------------------------------------------
 
@@ -72,7 +72,7 @@ from functools import reduce
 # Explanation:
 # Write a function `aggregate_customer_balances` that takes a list of customers, where each customer is represented by a
 # dictionary with "name" (str) and "accounts" (list of dictionaries). Each account dictionary contains "account_number" (str)
-# and "balance" (float). Use `reduce()` to calculate the total balance for each customer across all their accounts and return
+# and "_balance" (float). Use `reduce()` to calculate the total _balance for each customer across all their accounts and return
 # a dictionary mapping customer names to their total balances.
 
 
@@ -81,16 +81,16 @@ from functools import reduce
 #     {
 #         "name": "Alice",
 #         "accounts": [
-#             {"account_number": "123-456-789", "balance": 5000.0},
-#             {"account_number": "987-654-321", "balance": 3000.0},
+#             {"account_number": "123-456-789", "_balance": 5000.0},
+#             {"account_number": "987-654-321", "_balance": 3000.0},
 #         ]
 #     },
 #     {
 #         "name": "Bob",
 #         "accounts": [
-#             {"account_number": "111-222-333", "balance": 7500.0},
-#             {"account_number": "444-555-666", "balance": 2500.0},
-#             {"account_number": "777-888-999", "balance": 1000.0}
+#             {"account_number": "111-222-333", "_balance": 7500.0},
+#             {"account_number": "444-555-666", "_balance": 2500.0},
+#             {"account_number": "777-888-999", "_balance": 1000.0}
 #         ]
 #     }
 # ]

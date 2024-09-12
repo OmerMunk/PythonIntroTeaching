@@ -146,7 +146,7 @@ print(group_student_by_grade(students))
 # Explanation:
 # Write a function `calculate_total_balance` that takes a dictionary representing multiple bank accounts
 # and their respective balances. The dictionary's keys are the account numbers (strings), and the values
-# are the balances (floats). The function should return the total balance of all accounts.
+# are the balances (floats). The function should return the total _balance of all accounts.
 
 
 # Example Input:
@@ -158,7 +158,7 @@ print(group_student_by_grade(students))
 # }
 
 # Example Output:
-# Output: Total balance: 17301.35
+# Output: Total _balance: 17301.35
 
 # ----------------------------------------------------------------------
 
@@ -192,7 +192,7 @@ print(group_student_by_grade(students))
 # - "annual_interest_rate": the annual interest rate (float).
 # - "months": the total number of months for repayment (integer).
 # - "monthly_payment": the fixed monthly payment amount (float).
-# The function should calculate the remaining balance for each loan after a given number of months, assuming that payments are made
+# The function should calculate the remaining _balance for each loan after a given number of months, assuming that payments are made
 # at the end of each month and interest is compounded monthly. Return a new dictionary with loan IDs as keys and their corresponding
 # remaining balances as values.
 

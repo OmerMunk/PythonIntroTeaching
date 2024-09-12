@@ -23,12 +23,12 @@ print("Paired customers with accounts:", pair_customers_with_accounts(names, acc
 # Explanation:
 # Write a function `calculate_total_balance_per_customer` that takes two lists: one containing customer names (where a customer
 # might appear multiple times) and the other containing their corresponding account balances. Use `zip()` to combine the lists
-# and then use a dictionary to sum up the total balance for each customer.
+# and then use a dictionary to sum up the total _balance for each customer.
 
 def calculate_total_balance_per_customer(names, balances):
     # Use zip to combine names with their corresponding balances
     combined = zip(names, balances)
-    # Dictionary to store the total balance for each customer
+    # Dictionary to store the total _balance for each customer
     total_balances = {}
     for name, balance in combined:
         if name in total_balances:
@@ -42,8 +42,8 @@ names = ["Alice", "Bob", "Alice", "Charlie", "Bob"]
 balances = [5000.0, 3000.0, 1500.0, 7000.0, 2500.0]
 
 # Example Output:
-print("Total balance per customer:", calculate_total_balance_per_customer(names, balances))
-# Output: Total balance per customer: {'Alice': 6500.0, 'Bob': 5500.0, 'Charlie': 7000.0}
+print("Total _balance per customer:", calculate_total_balance_per_customer(names, balances))
+# Output: Total _balance per customer: {'Alice': 6500.0, 'Bob': 5500.0, 'Charlie': 7000.0}
 
 # ----------------------------------------------------------------------
 
@@ -51,7 +51,7 @@ print("Total balance per customer:", calculate_total_balance_per_customer(names,
 # Explanation:
 # Write a function `generate_financial_report` that takes three lists: one containing branch names, another containing lists of
 # account balances for each branch, and a third list containing the corresponding list of transaction counts for each branch.
-# Use `zip()` to pair these values together and then generate a financial report showing the branch name, total balance, and
+# Use `zip()` to pair these values together and then generate a financial report showing the branch name, total _balance, and
 # average transaction amount per branch.
 
 def generate_financial_report(branches, balances_per_branch, transactions_per_branch):
