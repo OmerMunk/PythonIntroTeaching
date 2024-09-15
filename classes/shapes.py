@@ -42,10 +42,15 @@ class Circle(Shape):
 
 class Square(Rectangle, Rhombus):
     def __init__(self, length, color):
-        super().__init__(4, color)
+        print(super().__init__)
+        print(type(super().__init__))
+        super().__init__(length, length, color)
+        exit(1)
+
         self.length = length
 
 if __name__ == "__main__":
-    c1 = Circle(20, "red")
-    c2 = Circle(20, "yellow")
-    print
+    # c1 = Circle(20, "red")
+    # c2 = Circle(20, "yellow")
+    print(Square.__mro__)
+    s1 = Square(20, "blue")

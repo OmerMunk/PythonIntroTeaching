@@ -1,3 +1,15 @@
+topics:
+python magic keywords
+magic keywords of classes
+abstract base class
+abstract method
+class method
+static method
+decorator
+*args
+**kwargs
+multiple inheritence
+
 1. fix the square class
 2. create some squares, circles, rectangles and rhombus in a 'main' part and try the methods. (the square needs some fix)
 3. create new file: abstract class (A) with at least 2 abstract methods, another class (B).
