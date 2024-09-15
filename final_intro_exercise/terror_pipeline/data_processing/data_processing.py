@@ -12,4 +12,5 @@ def aggregate_operations(data):
 
 # calculate total_words, avg_words_per_line, most_common_word
 def calculate_communication_metrics(lines):
+    # use map
     pass

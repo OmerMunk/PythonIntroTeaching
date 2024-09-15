@@ -1,4 +1,3 @@
-from modules.base import IntelligenceAnalysisUnit
 
 def log_decorator(func):
     pass
@@ -9,6 +8,7 @@ class CommunicationAnalysis(IntelligenceAnalysisUnit):
 
     @log_decorator
     def analyze(self):
+        #use reduce
         pass
 
     def _load_data(self):
