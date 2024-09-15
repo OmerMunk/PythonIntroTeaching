@@ -1,0 +1,14 @@
+1. fix the square class
+2. create some squares, circles, rectangles and rhombus in a 'main' part and try the methods. (the square needs some fix)
+3. create new file: abstract class (A) with at least 2 abstract methods, another class (B).
+create 3 more classes that will inherit both from A and B. create some instances to see if it works.
+4. create:
+@property
+@property.setter
+@custom decorator
+5.
+the custom decorator and the other functions in the class should contatin:
+5 different magic keywords in the class __???__
+*args
+**kwargs
+
