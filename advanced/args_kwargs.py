@@ -136,6 +136,7 @@ more readable
 # 6. Advanced Use Cases
 # example for decorator with use of *args and **kwargs
 
+
 def log(func):
     def wrapper(*args, **kwargs):
         print(f"calling function {func.__name__} with arguments {args} {kwargs}")
@@ -144,6 +145,9 @@ def log(func):
         return result
     return wrapper
 
+@log
+def nothing():
+    return None
 
 @log
 def add(a, b, *numbers, remainder=6, **rules):
