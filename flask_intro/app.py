@@ -2,6 +2,23 @@
 # create a directory flask_intro
 # create a file app.py
 
+"""
+create a full rest api backend for users.
+you need to implement the following:
+create user
+get all users
+get one user by id
+get one user by name
+update user
+update all users
+delete user
+delete all users
+
+bonus:
+get average of all ages
+count how many users
+"""
+
 from flask import Flask, request, jsonify
 
 
