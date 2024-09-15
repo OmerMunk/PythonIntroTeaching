@@ -103,8 +103,60 @@ say_hello(**person)
 
 # 4. Using * and ** in Function Calls
 
+def mixed_function(*args, **kwargs):
+    print("positional", args)
+    print("keyword", kwargs)
+
+mixed_function(1, 2, 3, name='Shubi', age=500)
+
+# order of parameters in function:
+# 1. regular (positional arguments)
+# 2. *args
+# 3. keyword arguments
+# 4. **kwargs
+
+def example(a, b, *args, c=10, d=100, **kwargs):
+    pass
+
 
 
 # 5. Best Practices with *args and ** kwargs
+"""
+1. instead of *args and **kwargs, use good names like:
+*numbers, **user_details
+more readable
+
+2. use *args and **kwargs ONLY WHEN NECESSARY
+
+3. combine with defaults
+"""
+
+
+
 # 6. Advanced Use Cases
+# example for decorator with use of *args and **kwargs
+
+def log(func):
+    def wrapper(*args, **kwargs):
+        print(f"calling function {func.__name__} with arguments {args} {kwargs}")
+        result =  func(*args, **kwargs)
+        print(f"{func.__name__} returned {result}")
+        return result
+    return wrapper
+
+
+@log
+def add(a, b, *numbers, remainder=6, **rules):
+    result = a + b
+    for num in numbers:
+        result += num
+    result = result % remainder
+    for key, value in rules.items():
+        if key == 'multiply':
+            result *= value
+    return result
+
+add(1, 2, 6, 6, 7, remainder=4, multiply=3)
+
+
 # 7. Key Points
