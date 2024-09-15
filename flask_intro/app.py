@@ -19,11 +19,13 @@ delete all users
 bonus:
 get average of all ages
 count how many users
+get the sum of all ages
+get all the users that has a Gmail.
 """
 
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
-
+from sqlalchemy.exc import IntegrityError
 
 # users: list = [
 #     {
@@ -51,10 +53,21 @@ class User(db.Model):
     password = db.Column(db.String(80), nullable=False)
     age = db.Column(db.Integer, nullable=False)
 
+    def __repr__(self):
+        return f'<User {self.name} {self.email}>'
+
 
 # init the database
 with app.app_context():
     db.create_all()
+
+@app.errorhandler(IntegrityError)
+def handle_integrity_error(error):
+    return jsonify({'error': "Duplicate email or missing data"}), 400
+
+@app.errorhandler(404)
+def handle_not_found_error(error):
+    return jsonify({'error': 'Not found'}), 404
 
 
 @app.route('/')
@@ -69,6 +82,7 @@ def get_users():
 
 @app.route('/users/<int:id>', methods=['GET'])
 def get_user(id):
+    # user = User.query.get(id) -> found nothing? return None
     user = User.query.get_or_404(id)
     return jsonify({'name': user.name, 'email': user.email, 'age': user.age}), 200
     # filtered = list(filter(lambda user: user['id'] == id, ))
@@ -76,6 +90,31 @@ def get_user(id):
     #     return jsonify(filtered[0]), 200
     # else: #len = 0
     #     return jsonify({"error": f"user with the id {id} not exist"}), 404
+
+
+@app.route('/users/<int:id>', methods=['PUT'])
+def update_user(id):
+    user = User.query.get(id)
+    if user:
+        data = request.get_json()
+        if data.get('name'):
+            user.name = data['name']
+        if data.get('age'):
+            user.age = data['age']
+        db.session.commit()
+        return jsonify({'name': user.name, 'age': user.age}), 200
+    else:
+        return jsonify({'message': 'user not found'}), 404
+
+@app.route('/users/<int:id>', methods=['DELETE'])
+def delete_user(id):
+    user = User.query.get_or_404(id)
+    db.session.delete(user)
+    db.session.commit()
+    return jsonify({'message': 'user deleted'}), 200
+
+
+
 
 @app.route('/users', methods=['POST'])
 def create_user():
