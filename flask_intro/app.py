@@ -3,6 +3,7 @@
 # create a file app.py
 # pip install SQLAlchemy
 # pip install -U Flask-SQLAlchemy
+# pip install Flask-JWT-Extended
 
 """
 create a full rest api backend for users.
@@ -22,15 +23,19 @@ count how many users
 get the sum of all ages
 get all the users that has a Gmail.
 """
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from sqlalchemy.exc import IntegrityError
 from users.models import db
 from users.routes import users_bp
+from flask_jwt_extended import JWTManager
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['JWT_SECRET_KEY'] = 'MOCK_SECRET_123456'
+
+jwt = JWTManager(app)
 
 # init the database
 db.init_app(app)
@@ -39,11 +44,16 @@ db.init_app(app)
 def handle_integrity_error(error):
     return jsonify({'error': "Duplicate email or missing data"}), 400
 
-@app.errorhandler(404)
-def handle_not_found_error(error):
-    return jsonify({'error': 'Not found'}), 404
+# @app.errorhandler(404)
+# def handle_not_found_error(error):
+#     print(error)
+#     return jsonify({'error': 'Not found'}), 404
 
 app.register_blueprint(users_bp)
+
+@app.before_request
+def before_request():
+    print(f'Got request. method: {request.method}, URL: {request.url}. host: {request.host}')
 
 if __name__ == '__main__':
     app.run(debug=True)
