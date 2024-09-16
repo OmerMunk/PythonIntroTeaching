@@ -4,7 +4,7 @@ from sqlalchemy.orm import validates
 db = SQLAlchemy()
 
 class User(db.Model):
-    __tablename__ = 'my_app_users'
+    # __tablename__ = 'my_app_users'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(80), unique=True, nullable=False)
@@ -17,5 +17,7 @@ class User(db.Model):
 
     @validates('email')
     def validate_email(self, key, email):
+        print(f"key is {key}")
+        print(f"email is {email}")
         assert email.count('@') == 1, "Email must contain '@' character"
         return email

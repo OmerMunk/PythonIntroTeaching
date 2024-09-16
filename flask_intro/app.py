@@ -66,14 +66,12 @@ limiter = Limiter(
 def test():
     return "hello"
 
-
-# init the database
-db.init_app(app)
-
-
 # init the database - extra option
 # with app.app_context():
 #     db.create_all()
+
+# init the database
+db.init_app(app)
 
 
 migrate = Migrate(app, db)

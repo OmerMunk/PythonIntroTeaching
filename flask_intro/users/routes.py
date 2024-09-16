@@ -23,6 +23,8 @@ admins = [
 ]
 
 
+
+
 @users_bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
@@ -64,7 +66,6 @@ def search_users():
 
 
 @users_bp.route('/users/<int:id>', methods=['GET'])
-
 def get_user(id):
     # user = User.query.get_or_404(id)
     user = User.query.get(id)
