@@ -2,10 +2,12 @@ from flask import Blueprint, jsonify, request
 from sqlalchemy.exc import IntegrityError
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from markupsafe import escape
+from flask_limiter import Limiter
 
 from .models import User, db
 
 users_bp = Blueprint('users', __name__)
+
 
 
 @users_bp.route('/')
@@ -52,8 +54,17 @@ def get_users():
         users_response = generate_users_response(users=users)
         return jsonify(users_response), 200
 
+@users_bp.route('/users/search', methods=['GET'])
+def search_users():
+    '/users/search?email=a@a.com'
+    email = request.args.get('email') # a@a.com
+    # parameterized query of sql alchemy to prevent sql injection
+    user = User.query.filter_by(email=email).first()
+
+
 
 @users_bp.route('/users/<int:id>', methods=['GET'])
+
 def get_user(id):
     # user = User.query.get_or_404(id)
     user = User.query.get(id)

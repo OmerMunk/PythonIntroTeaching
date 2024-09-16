@@ -4,6 +4,12 @@
 # pip install SQLAlchemy
 # pip install -U Flask-SQLAlchemy
 # pip install Flask-JWT-Extended
+# pip install Flask-Migrate
+# pip install Flask-Limiter
+
+# ATTACKS:
+# sql injection
+# code / script injection
 
 # implement login
 # protect specific route to require jwt
@@ -29,8 +35,11 @@ get average of all ages
 count how many users
 get the sum of all ages
 get all the users that has a Gmail.
+
 """
 from flask import Flask, jsonify, request
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from sqlalchemy.exc import IntegrityError
 from users.models import db
 from users.routes import users_bp
@@ -43,6 +52,19 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'MOCK_SECRET_123456'
 
 jwt = JWTManager(app)
+
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["200 per day", "50 per hour"],
+    storage_uri="memory://",
+)
+
+@app.route('/test', methods=['GET'])
+@limiter.limit('5 per minute')
+def test():
+    return "hello"
+
 
 # init the database
 db.init_app(app)
