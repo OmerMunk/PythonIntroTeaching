@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy.exc import IntegrityError
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
+from markupsafe import escape
 
 from .models import User, db
 
@@ -11,12 +12,14 @@ users_bp = Blueprint('users', __name__)
 def home():
     return 'Welcome to the best Kodcode API ever!! Shkoyech'
 
+
 admins = [
     {
         'username': 'admin1',
         'password': '123456'
     }
 ]
+
 
 @users_bp.route('/login', methods=['POST'])
 def login():
@@ -30,6 +33,7 @@ def login():
             return jsonify({'access_token': access_token, 'message': 'login success'}), 200
         else:
             return jsonify({'message': 'login failed'}), 401
+
 
 def generate_users_response(users=None, user=None):
     if users:
@@ -91,7 +95,8 @@ def delete_user(id):
 @users_bp.route('/users', methods=['POST'])
 def create_user():
     data = request.get_json()
-    new_user = User(name=data['name'], email=data['email'], password=data['password'], age=data['age'])
+    print(data)
+    new_user = User(name=escape(data['name']), email=data['email'], password=data['password'], age=data['age'])
     try:
         db.session.add(new_user)
         db.session.commit()

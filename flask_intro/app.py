@@ -5,6 +5,13 @@
 # pip install -U Flask-SQLAlchemy
 # pip install Flask-JWT-Extended
 
+# implement login
+# protect specific route to require jwt
+# try to hack a route (enter with a jwt to created using jwt.io)
+# make sure all db is protected (try, except, transaction, rollback())
+# create middleware will escape every value from the JSON body.
+# create a midleware that will print all the data before each request
+
 """
 create a full rest api backend for users.
 you need to implement the following:
