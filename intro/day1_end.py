@@ -22,4 +22,12 @@ map
 reduce
 zip
 enumerate
+lambda
+decorators
+classes
+exceptions, try, catch, raise
+magic methods agic key words
+abstract
+inheritence
+multiple inheritence
 """
