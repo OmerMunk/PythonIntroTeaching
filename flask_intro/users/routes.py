@@ -5,9 +5,6 @@ from .models import User, db
 users_bp = Blueprint('users', __name__)
 
 
-
-
-
 @users_bp.route('/')
 def home():
     return 'Welcome to the best Kodcode API ever!! Shkoyech'
