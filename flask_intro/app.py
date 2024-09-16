@@ -70,6 +70,12 @@ def test():
 # init the database
 db.init_app(app)
 
+
+# init the database - extra option
+# with app.app_context():
+#     db.create_all()
+
+
 migrate = Migrate(app, db)
 
 @app.errorhandler(IntegrityError)
