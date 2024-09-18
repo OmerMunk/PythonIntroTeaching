@@ -1,10 +1,14 @@
+import pytest
+
 # Exercise 1: Simple Subtraction Test
 # Write a function that subtracts two numbers and create a `pytest` test to verify it works as expected.
 def subtract(a, b):
-    pass
+    return a - b
 
 def test_subtract():
-    pass
+    assert subtract(1, 2) == -1
+    with pytest.raises(TypeError):
+        assert subtract("a", 1)
 
 # Exercise 2: String Lowercase
 # Write a function that converts a string to lowercase. Test it using `pytest`.
