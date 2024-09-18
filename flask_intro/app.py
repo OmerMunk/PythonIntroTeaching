@@ -61,10 +61,10 @@ limiter = Limiter(
     storage_uri="memory://",
 )
 
-@app.route('/test', methods=['GET'])
-@limiter.limit('5 per minute')
-def test():
-    return "hello"
+# @app.route('/test', methods=['GET'])
+# @limiter.limit('5 per minute')
+# def test():
+#     return "hello"
 
 # init the database - extra option
 # with app.app_context():
