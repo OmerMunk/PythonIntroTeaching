@@ -56,10 +56,17 @@ def get_users():
         users_response = generate_users_response(users=users)
         return jsonify(users_response), 200
 
-@users_bp.route('/users/search', methods=['GET'])
+@users_bp.route('/', methods=['GET'])
 def search_users():
     '/users/search?email=a@a.com'
-    email = request.args.get('email') # a@a.com
+    '/?sortby=completed_at&filterby=duedate_is_16-09&eli=pshashih&shuki=jlji'
+    filterby = request.args.get('filterby') # a@a.com
+    sortby = request.args.get('sortby') # a@a.com
+    if filterby:
+        filter_parts = filterby.split('_') # ['duedate','is','16-09']
+        filter_by = filter_parts[0]
+        filter_value = filter_parts[2]
+        filter_date = datetime.strptime(filter_by, '%d-%m')
     # parameterized query of sql alchemy to prevent sql injection
     user = User.query.filter_by(email=email).first()
 

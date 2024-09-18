@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>what</title>
+    <script>
+
+
+        navigator.clipboard
+            .readText()
+            .then(
+                (clipText) => (document.querySelector(".editor").innerText += clipText),
+            );
+
+
+        const canvas = document.createElement("canvas");
+        const editContext = new EditContext();
+        canvas.editContext = editContext;
+
+
+        const range = document.caretPositionFromPoint(e.clientX, e.clientY);
+        const textNode = range.offsetNode;
+        const offset = range.offset;
+
+
+        let fd = new FormData(form);
+        let data = JSON.stringify(Object.fromEntries(fd));
+    </script>
+    <style>
+        /*select,*/
+        /*::picker(select) {*/
+        /*    appearance: base-select;*/
+        /*}*/
+    </style>
+</head>
+<body>
+
+<button popovertarget="foo">Toggle the popover</button>
+<div id="foo" popover>Popover content</div>
+
+
+<div id=app inert class=loading>
+    ...
+</div>
+
+
+<dialog id="confirm">
+    <form method="dialog">
+        Are you sure?
+        <button value="1">Yes</button>
+        <button value="0">No</button>
+    </form>
+</dialog>
+
+
+<details>
+    <summary>Details</summary>
+    Longer content
+</details>
+
+
+<img src="picture.jpg" loading="lazy" />
+<iframe src="supplementary.html" loading="lazy"></iframe>
+
+
+<details open name="sidebar_panel" id="main_info">
+    <summary>Main info</summary>
+    <!-- controls -->
+</details>
+<details name="sidebar_panel" id="style_settings">
+    <summary>Style</summary>
+    <!-- controls -->
+</details>
+
+
+<h2 class="title" contenteditable="plaintext-only">are</h2>
+<label for="country">list of</label>
+<input id="country" name="country" list="countries">
+<datalist id="countries">
+    <option>Afghanistan</option>
+    <option>Israel</option>
+    <option>UK</option>
+    <option>USA</option>
+</datalist>
+
+<input name="address_firstline" autocomplete="billing street-address"/>
+
+<input id="dateInput" type="date">
+<button onclick="dateInput.showPicker()">Select date</button>
+
+<input type="file" accept="video/*" capture>
+
+
+</body>
+</html>
