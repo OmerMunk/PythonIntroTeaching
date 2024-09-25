@@ -17,7 +17,11 @@ def insert_user():
 
 @worker_bp.route('/find', methods=['GET'])
 def find_all():
-    result, users = get_all_users()
+    data = request.args
+    find_by = data.get('find_by')
+    value = data.get('value')
+    count = data.get('count')
+    result, users = get_all_users(find_by=find_by, value=value, count=count)
     if result is True:
         return jsonify({"users": users}), 200
     else:
