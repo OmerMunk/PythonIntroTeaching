@@ -22,7 +22,7 @@
 # TODO: use parameterized queries
 
 import psycopg2
-from psycopg2 import pool
+from psycopg2 import pool, extensions
 
 import logging
 
@@ -57,7 +57,8 @@ if __name__ == '__main__':
 
 
         print("Connected to the database")
-        cur = conn.cursor()
+        cur: extensions.cursor = conn.cursor()
+
 
         # this is how to make a query and fetch all the results
         name_to_search = input("Hi, I am so naive, enter the name you want me to search")
