@@ -1,0 +1,30 @@
+1. לנרמל דטהבייס לא מנורמל למנורמל
+שימו לב ל 1nf, 2nf, 3nf
+שימו לב לכפילויות וכו׳, או חוסר סדר וכו׳
+
+2. לדעת להרים שרת פלאסק
+עם סוג חיבור postgres psycopg2
+וכמובן סוג חיבור הישן - flask_sql_aclchemy
+
+3. להתאמן על התרגילים של השאילתות
+join (inner, left, natural)
+where
+group by
+having
+order by
+limit
+view
+function
+
+4.
+לזכור איך מודדים יעילות ומה הפירוש
+explain
+explain analyze
+sequential scan (SEQ SCAN)
+index scan (IDX SCAN)
+
+
+
+5. איך לאנדקס?
+CREATE INDEX idx_user_name ON users (name);
+CREATE INDEX idx_user_name_phone ON users (name, phone);
