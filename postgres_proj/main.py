@@ -43,17 +43,9 @@ if __name__ == '__main__':
         #     port="5432"
         # )
 
-        connection_pool = psycopg2.pool.SimpleConnectionPool(
-            minconn=1,
-            maxconn=10,
-            dbname="test1db",
-            user="omermunk",
-            password="1234",
-            host="localhost",
-            port="5432"
-        )
 
-        conn = connection_pool.getconn()
+
+
 
 
         print("Connected to the database")
@@ -84,7 +76,7 @@ if __name__ == '__main__':
 
         cur.close()
 
-        connection_pool.putconn(conn)
+
 
 
     except psycopg2.Error as e:
