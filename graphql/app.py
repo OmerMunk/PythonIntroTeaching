@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask, jsonify
 # create a new venv
 # install falsk
 # install graphene
 # pip install graphene
 
 import graphene
+
 
 # שלבים:
 # ליצור query
@@ -49,45 +50,38 @@ import graphene
 #
 
 
-
 class Book(graphene.ObjectType):
     id = graphene.NonNull(graphene.Int)
-    title = graphene.String
-    author = graphene.String
+    title = graphene.String()
+    author = graphene.String()
 
 
-class Query (graphene.ObjectType):
-
+class Query(graphene.ObjectType):
     book = graphene.Field(Book)
 
     def resolve_book(self, info):
-        return Book(id=1, title="Harry Potter", author="J.K. Rowling")
-
-
+        return Book(id=1, title="Harry Potter", author="J. K. Rowling")
 
 
 schema = graphene.Schema(query=Query)
 
-my_query = """
-    {
-        book {
-            id, title
-        }
-    }
-"""
-
-
-result = schema.execute(my_query)
-
-
-
 app = Flask(__name__)
+
 
 @app.route('/')
 def root_source():
-    return {
-        "data": result.data
-    }
+    my_query = """
+        {
+            book {
+                id
+                title
+            }
+        }
+    """
+
+    result = schema.execute(my_query)
+    return jsonify(result.data)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
